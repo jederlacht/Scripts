@@ -1,0 +1,15 @@
+git clone https://github.com/qgis/QGIS.git
+
+yum install qtwebkit-devel proj-devel postgresql-devel spatialindex-deve qwt-devel txt2tags qscintilla* fcgi-devel gsl-devel pyqt4-devel qt4-devel libsq3-devel libspatialite-devel geos-devel gcc gcc-c++ cmake flex bison expat-devel git
+rpm -i oracle-instantclient12.1-devel-12.1.0.1.0-1.x86_64.rpm 
+rpm -i oracle-instantclient12.1-basic-12.1.0.1.0-1.x86_64.rpm
+
+cd QGIS/
+mkdir build
+cd build
+ccmake ..
+make
+make install
+LD_LIBRARY_PATH=/usr/local/lib
+export LD_LIBRARY_PATH
+/usr/local/bin/qgis
