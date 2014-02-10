@@ -10,6 +10,7 @@ cd build
 ccmake ..
 make
 make install
-LD_LIBRARY_PATH=/usr/local/lib
-export LD_LIBRARY_PATH
+
+export LD_LIBRARY_PATH=/usr/local/lib
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/oracle/10.2.0.5/client/lib
 /usr/local/bin/qgis
